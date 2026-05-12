@@ -3,13 +3,14 @@ import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/fi
 import { getFirestore, collection, addDoc, query, where, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "ISI_APIKEY_KAMU",
-  authDomain: "ISI_DOMAIN.firebaseapp.com",
-  projectId: "ISI_PROJECT_ID",
-  storageBucket: "ISI.appspot.com",
-  messagingSenderId: "XXXX",
-  appId: "XXXX"
-};
+    apiKey: "AIzaSyBioqM7NYa4FDvQ3zUISGt_YS_b-TThUNk",
+    authDomain: "db-ai-b73e5.firebaseapp.com",
+    projectId: "db-ai-b73e5",
+    storageBucket: "db-ai-b73e5.firebasestorage.app",
+    messagingSenderId: "617783948329",
+    appId: "1:617783948329:web:18d9942e8c3b73858dd838",
+    measurementId: "G-ZZGV797JYQ"
+  };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
