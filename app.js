@@ -144,3 +144,33 @@ window.logout = function () {
 input.addEventListener("keypress", function (e) {
   if (e.key === "Enter") sendMessage();
 });
+window.sendMessage = function() {
+  const input = document.getElementById("userInput");
+  const chat = document.getElementById("chatBox");
+  const text = input.value.trim();
+  if(!text) return;
+
+  chat.innerHTML += `<div class="user">${text}</div>`;
+
+  input.value = "";
+
+  setTimeout(()=>{
+    const reply = smartReply(text);
+    chat.innerHTML += `<div class="ai">${reply}</div>`;
+  },1000);
+}
+
+function smartReply(text){
+  text = text.toLowerCase();
+
+  if(text.includes("halo"))
+    return "Halo 👋 Saya DB AI Assistant. Siap membantu bisnis & freelance kamu.";
+
+  if(text.includes("freelance"))
+    return "Kamu bisa cek: Fiverr, Upwork, Freelancer.com, Sribulancer.";
+
+  if(text.includes("siapa kamu"))
+    return "Saya DB AI, asisten pintar untuk bisnis, coding, dan kehidupan.";
+
+  return "Pertanyaan menarik 👀 Bisa jelaskan lebih detail?";
+}
