@@ -22,12 +22,13 @@ const input = document.getElementById("userInput");
 let currentUser = null;
 let memory = [];
 
-onAuthStateChanged(auth, async (user) => {
+onAuthStateChanged(auth, (user) => {
   if (user) {
-    currentUser = user;
-    loadChat();
+    document.getElementById("loginSection").style.display = "none";
+    document.getElementById("chatSection").style.display = "block";
   } else {
-    window.location.href = "login.html";
+    document.getElementById("loginSection").style.display = "block";
+    document.getElementById("chatSection").style.display = "none";
   }
 });
 
