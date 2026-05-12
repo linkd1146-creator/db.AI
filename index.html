@@ -16,7 +16,22 @@
   <button onclick="register()">Register</button>
   <button onclick="login()">Login</button>
 </div>
+<div class="app">
+  <div class="header">
+    <h2>DB AI Assistant</h2>
+    <button onclick="logout()">Logout</button>
+  </div>
 
+  <div id="chatBox"></div>
+
+  <div class="input-area">
+    <input id="userInput" placeholder="Tanyakan sesuatu..." />
+    <button onclick="startListening()">🎤</button>
+    <button onclick="sendMessage()">Kirim</button>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
 <script type="module" src="app.js"></script>
 </body>
 </html>
