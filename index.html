@@ -6,17 +6,22 @@
 </head>
 <body>
 
-<div class="container">
+<!-- LOGIN SECTION -->
+<div class="container" id="loginSection">
   <h1>DB AI</h1>
   <p>Smart AI Assistant untuk Bisnis & Freelance</p>
-<button onclick="loginGoogle()">Login dengan Google</button>
+
+  <button onclick="loginGoogle()">Login dengan Google</button>
+
   <input type="email" id="email" placeholder="Email">
   <input type="password" id="password" placeholder="Password">
 
   <button onclick="register()">Register</button>
   <button onclick="login()">Login</button>
 </div>
-<div class="app">
+
+<!-- CHAT SECTION -->
+<div class="app" id="chatSection" style="display:none;">
   <div class="header">
     <h2>DB AI Assistant</h2>
     <button onclick="logout()">Logout</button>
@@ -31,7 +36,6 @@
   </div>
 </div>
 
-<script type="module" src="app.js"></script>
 <script type="module" src="app.js"></script>
 </body>
 </html>
